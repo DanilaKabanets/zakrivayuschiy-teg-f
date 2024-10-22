@@ -1,1 +1,19 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+    --press-start: "PressStart", sans-serif;
+    --inter: "Inter", sans-serif;
+    --heading-fw: 785;
+    --text-fw: 400;
+    --background-color: #fff;
+    --common-color: #000;
+    --button-text-color: #fff;
+    --background-image: repeating-linear-gradient(to left, #d3d3d3 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+    --heart-red: #f00;
+    --heart-main-color:#fff;
+    --heart-contour-color: #000;
+    --heart-sparks-color: #f00;
+
+}
