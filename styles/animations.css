@@ -63,14 +63,14 @@
 }
 
 .like-icon.is-liked .heart {
-    animation: scaling 0.3s 0.1s ease-in alternate;
+    animation: scaling-heart-icon 0.3s 0.1s ease-in alternate 1;
 }
 
 .like-icon.is-liked .sparks {
-    animation: sparks 0.3s 0.3s ease-in alternate;
+    animation: sparks-like-icon 0.3s 0.3s ease-in alternate 1;
 }
 
-@keyframes arrow {
+@keyframes arrow-theme-menu {
     from {
         transform: translate(0);
     }
@@ -80,7 +80,7 @@
     }
 }
 
-@keyframes scaling {
+@keyframes scaling-heart-icon {
     from {
         transform: scale(1);
     }
@@ -90,7 +90,7 @@
     }
 }
 
-@keyframes sparks {
+@keyframes sparks-like-icon {
     from {
         opacity: 0;
     }

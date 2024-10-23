@@ -27,6 +27,7 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: var(--inter);
+  font-variation-settings: "wght" var(--text-fw);
 }
 
 .header {
@@ -77,7 +78,6 @@
 .theme-menu__button {
   font-family: var(--press-start);
   font-size: 14px;
-  font-weight: var(--text-fw);
   line-height: normal;
   background-color: transparent;
   border: none;
@@ -90,7 +90,6 @@
 
 .theme-menu__button:disabled,
 .theme-menu__button:hover,
-.theme-menu__button:focus,
 .theme-menu__button:focus-visible {
   opacity: 0.6;
 }
@@ -114,7 +113,8 @@
   content: "▶";
   position: absolute;
   left: -20px;
-  animation: arrow 0.5s ease-in-out infinite alternate;
+  top: 0;
+  animation: arrow-theme-menu 0.5s ease-in-out infinite alternate;
 }
 
 .theme-menu__button:hover {
@@ -176,7 +176,7 @@
   color: var(--common-color);
   font-family: var(--press-start);
   font-size: 0.875rem;
-  font-weight: var(text-fw);
+  font-weight: 400;
   text-shadow: -1px 0px var(--background-color), 0px 1px var(--background-color),
     1px 0px var(--background-color), 0px -1px var(--background-color);
   mix-blend-mode: hard-light;
@@ -201,31 +201,31 @@
   aspect-ratio: 1 / 1;
 }
 
-.grayscale {
+.filter-grayscale {
   filter: grayscale(70%);
 }
 
-.saturate {
+.filter-saturate {
   filter: saturate(300%);
 }
 
-.hue-rotate {
+.filter-hue-rotate {
   filter: hue-rotate(31deg);
 }
 
-.invert {
+.filter-invert {
   filter: invert(75%);
 }
 
-.sepia {
+.filter-sepia {
   filter: sepia(100%);
 }
 
-.blur {
+.filter-blur {
   filter: blur(15px);
 }
 
-.multiple {
+.filter-multiple {
   filter: saturate(200%) hue-rotate(125deg) contrast(50%) blur(2px)
     brightness(120%);
 }
@@ -255,12 +255,12 @@
   max-block-size: 38px;
   background-color: transparent;
   padding: 0;
-  border: transparent;
+  border: 2px solid transparent;
 }
 
-.card__icon-button:focus {
-  outline: none;
-}
+.card__icon-button:focus { 
+  outline: none; 
+} 
 
 .card__icon-button:focus-visible {
   outline: none;
@@ -289,7 +289,7 @@
   border: 2px solid var(--common-color);
 }
 
-.button:focus {
+.button:focus-visible {
   outline: none;
   box-shadow: 2px 2px 0 0 var(--common-color);
 }
@@ -310,10 +310,6 @@
 
 .button:hover::before {
   transform: scaleX(1);
-}
-
-.button::after {
-  background-color: var(--background-color);
 }
 
 .button__text {
@@ -347,8 +343,11 @@
   mix-blend-mode: difference;
 }
 
-.dialog[open] {
+.dialog[open]{
   display: grid;
+}
+
+.dialog {
   gap: 28px;
   border: 2px solid var(--common-color);
   padding: 31px 40px 30px;
@@ -413,7 +412,7 @@
     gap: 27px;
   }
 
-  .dialog[open] {
+  .dialog {
     padding: 31px 30px 28px;
     max-inline-size: 357px;
   }
