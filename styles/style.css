@@ -34,8 +34,7 @@
   display: flex;
   flex-direction: column;
   margin-block-start: 100px;
-  padding: clamp(7.5rem, 1.502vw + 7.148rem, 8.5rem)
-    clamp(0.875rem, 9.953vw - 1.458rem, 7.5rem) 1.563rem;
+  padding: clamp(7.5rem, 1.502vw + 7.148rem, 8.5rem) clamp(0.875rem, 9.953vw - 1.458rem, 7.5rem) 1.563rem;
   inline-size: min(698px, 100%);
   align-items: center;
   border: 2px solid var(--common-color);
@@ -182,10 +181,7 @@
   mix-blend-mode: hard-light;
 }
 
-@supports (
-  (text-stroke: 1px var(--background-color)) or
-    (-webkit-text-stroke: 1px var(--background-color))
-) {
+@supports ((text-stroke: 1px var(--background-color)) or (-webkit-text-stroke: 1px var(--background-color))) {
   .card__image-mark {
     text-stroke: 1px var(--background-color);
     text-shadow: none;
@@ -226,8 +222,7 @@
 }
 
 .filter-multiple {
-  filter: saturate(200%) hue-rotate(125deg) contrast(50%) blur(2px)
-    brightness(120%);
+  filter: saturate(200%) hue-rotate(125deg) contrast(50%) blur(2px) brightness(120%);
 }
 
 .card__description {
@@ -258,9 +253,11 @@
   border: 2px solid transparent;
 }
 
-.card__icon-button:focus { 
-  outline: none; 
-} 
+.card__icon-button:focus {
+
+  outline: none;
+
+}
 
 .card__icon-button:focus-visible {
   outline: none;
@@ -343,7 +340,7 @@
   mix-blend-mode: difference;
 }
 
-.dialog[open]{
+.dialog[open] {
   display: grid;
 }
 
