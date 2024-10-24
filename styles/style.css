@@ -286,6 +286,13 @@
   border: 2px solid var(--common-color);
 }
 
+
+.button:focus {
+
+  outline: none;
+
+}
+
 .button:focus-visible {
   outline: none;
   box-shadow: 2px 2px 0 0 var(--common-color);
